@@ -34,3 +34,5 @@ const rob = (nums) => {
   return total[total.length - 1]
 
 }
+
+// rob([8,1,3,10,7])
