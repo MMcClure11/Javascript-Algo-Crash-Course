@@ -11,7 +11,7 @@ const hasCycle = (head) => {
   let fastPointer = head
   let slowPointer = head
 
-  while(fastPointer !== null && slowPointer !== null) {
+  while(fastPointer !== null && fastPointer.next !== null) {
     fastPointer = fastPointer.next.next
     slowPointer = slowPointer.next
 
@@ -23,7 +23,3 @@ const hasCycle = (head) => {
   return false
 
 };
-//Interesting, running this code in a repl, when one creates a cyclical linked list it successfully returns true
-//however if the linked list does NOT have a cycle, it errors out 
-// because 'Cannot read property 'next' of null at hasCycle' (fastpointer.next.next)
-
