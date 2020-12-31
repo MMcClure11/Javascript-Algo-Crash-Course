@@ -7,3 +7,19 @@
 // if you have a slow(moves 1 node) and fast pointer(moves 2 nodes) 
 //check to see if they ever line up on the same node again
 
+const hasCycle = (head) => {
+  let fastPointer = head
+  let slowPointer = head
+
+  while(fastPointer !== null && slowPointer !== null) {
+    fastPointer = fastPointer.next.next
+    slowPointer = slowPointer.next
+
+    if (fastPointer === slowPointer) {
+      return true
+    }
+  }
+
+  return false
+
+};
