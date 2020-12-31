@@ -23,3 +23,17 @@ const hasCycle = (head) => {
   return false
 
 };
+
+//For testing
+let Node = function(value) {
+  return { value: value, next: null };
+};
+
+let nodeA = Node('A');
+let nodeB = nodeA.next = Node('B');
+let nodeC = nodeB.next = Node('C');
+let nodeD = nodeC.next = Node('D');
+let nodeE = nodeD.next = Node('E');
+// hasCycle(nodeA); // => false
+nodeE.next = nodeB;
+hasCycle(nodeA); // => true
