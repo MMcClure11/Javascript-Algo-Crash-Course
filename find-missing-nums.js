@@ -17,7 +17,7 @@
 const findMissingNums = (nums) => {
   for(let i = 0; i < nums.length; i++){
     let q = Math.abs(nums[i]) - 1 //set the index for each num
-    nums[q] = Math.abs(nums[q]) * -1 //take the index and make it a negative number
+    nums[q] = Math.abs(nums[q]) * -1 //take the index and make it a negative number  //=> [-1,-2,4,-2]
   }
 
   let results = []
