@@ -5,3 +5,11 @@
 // [1,2,4,2] //=> [3]
 // [1,5,7,8,6] //=> [2,3,4]
 // Solve in O(n)
+
+
+//Notes: Shan's solve only works with single digits in the array, 
+//and Shan’s solution does not cover edge cases such as more than two missing consecutively. 
+//Did some googling with not much helpful insight. 
+//I think how you solve really depends on if the given array is sequential or not, 
+//and if it has more than single digits…
+//Some prompts indicate there will only be one num missing.
