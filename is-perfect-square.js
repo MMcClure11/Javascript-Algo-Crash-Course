@@ -1,3 +1,11 @@
+// Given a positive integer, return true if it is a perfect square, false if it is not
+// Examples
+// 9 //=> true
+// 10 //=> false
+// Conditions: Do not use any built in methods such as sqrt
+// Hint: Use a binary search function
+
+
 const isPerfectSquare = (num) => {
   if(num < 1){
     return false
