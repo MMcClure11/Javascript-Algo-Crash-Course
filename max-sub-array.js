@@ -12,7 +12,8 @@
 
 // add first element to both vars
 
-const maxSumArray = (nums) => {
+//Shan's answer
+const maxSubArray = (nums) => {
   let maxCurrent = nums[0]
   let maxGlobal = nums[0]
   for(let i = 1; i < nums.length; i++) {
@@ -22,4 +23,21 @@ const maxSumArray = (nums) => {
     }
   }
   return maxGlobal //return the largest sum
+}
+
+// Leetcode Problem - 53 Maximum Subarray video
+// https://www.youtube.com/watch?v=xo2_1l7ScAw
+// https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
+
+let maxSubArrayTwo = function(nums) {
+  let localMax = 0;
+  let globalMax = Number.NEGATIVE_INFINITY;
+
+  for (let i =0; i < nums.length; i++) {
+    localMax = Math.max(nums[i], nums[i] + localMax)
+    if (localMax > globalMax) {
+      globalMax = localMax
+    }
+  }
+  return globalMax
 }
