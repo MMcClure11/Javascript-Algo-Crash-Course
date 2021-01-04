@@ -29,6 +29,11 @@ const maxSubArray = (nums) => {
 // https://www.youtube.com/watch?v=xo2_1l7ScAw
 // https://medium.com/@rsinghal757/kadanes-algorithm-dynamic-programming-how-and-why-does-it-work-3fd8849ed73d
 
+
+// Input: [-2,1,-3,4,-1,2,1,-5,4]
+// Output: 6
+// Explanation: [4,-1,2,-1] has the largest sum 6
+
 let maxSubArrayTwo = function(nums) {
   let localMax = 0;
   let globalMax = Number.NEGATIVE_INFINITY;
