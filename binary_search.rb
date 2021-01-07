@@ -61,4 +61,3 @@ puts resbi.nil? ? "Could not find #{search_num}" : "Found #{search_arr[resbi]} a
 #linear searches left to right, and binary doesn't, you might find the correct number at a different index
 #it is acceptable because it is returning the correct solution
 #because both found A valid index with that number in it
-
