@@ -38,5 +38,12 @@ class Stack {
     this.size++
   }
 
+  pop() {
+    let top = this.storage[this.size - 1]
+    delete this.storage[this.size - 1]
+    this.size--
+
+    return top
+  }
 
 }
