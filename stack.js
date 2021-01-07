@@ -25,3 +25,18 @@
 // 5. empty()
       // checks the stack, if there are no elements, returns false, if there is an element returns false
       // check if size is 0
+
+class Stack {
+
+  constructor() {
+    this.storage = {}
+    this.size = 0
+  }
+
+  push(val) {
+    this.storage[this.size] = val //get the storage at the index of the size
+    this.size++
+  }
+
+
+}
