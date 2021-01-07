@@ -12,6 +12,10 @@ def binary_search_iter(arr, el)
     mid = (min + max) / 2
     if arr[mid] == el
       return mid
+    elsif arr[mid] > el #if the mid is greater than element looking for, discount right side and focus on left
+      max = mid - 1
+    else #covers remaining logic, if mid is less than element looking for, discount left and focus on right
+      min = mid + 1
     end
   end
 
