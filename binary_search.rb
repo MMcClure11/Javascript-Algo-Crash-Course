@@ -1,6 +1,7 @@
 #Goal: obtain O(lg(n)) binary search algorithm instead on O(n) which we might get if using built in methods
 
 #specify an arr_size so we can reuse it
+#To run this file: ruby binary_search.rb
 
 arr_size = 1000
 r = Random.new
