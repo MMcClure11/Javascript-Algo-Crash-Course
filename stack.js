@@ -54,4 +54,8 @@ class Stack {
     return this.size //always is 0  in the beginning, increased by one every time an element is added
   }
 
+  empty() {
+    return this.size() === 0
+  }
+
 }
