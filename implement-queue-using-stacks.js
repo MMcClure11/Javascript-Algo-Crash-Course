@@ -22,3 +22,15 @@
 //   then delete the last element of stack2 which would be 1; now it is acting like a queque
 //   to add, add it to stack1
 //   stack2 is for deleting
+
+
+//implement a queue using stacks
+
+const MyQueue = () => {
+  this.pushStack = new Stack() //adding
+  this.popStack = new Stack() //deleting
+}
+
+MyQueue.prototype.push = function(x) {
+  this.pushStack.push(x)
+}
