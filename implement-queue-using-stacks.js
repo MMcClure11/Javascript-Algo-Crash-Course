@@ -45,3 +45,18 @@ MyQueue.prototype.pop = function() {
 
   return this.popStack.pop()
 }
+
+MyQueue.prototype.peek = function() {
+
+  if(this.popStack.empty()) {
+    while(!this.pushStack.empty()) {
+      this.popStack.push(this.pushStack.pop())
+    }
+  }
+
+  return this.popStack.peek()
+}
+
+MyQueue.prototype.empty = function() {
+  return this.pushStack.empty() && this.popStack.empty()
+}
