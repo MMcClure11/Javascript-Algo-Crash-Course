@@ -46,4 +46,12 @@ class Stack {
     return top
   }
 
+  peek() {
+    return this.storage[this.size -1]
+  }
+
+  size() {
+    return this.size //always is 0  in the beginning, increased by one every time an element is added
+  }
+
 }
