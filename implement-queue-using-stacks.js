@@ -34,3 +34,14 @@ const MyQueue = () => {
 MyQueue.prototype.push = function(x) {
   this.pushStack.push(x)
 }
+
+MyQueue.prototype.pop = function() {
+
+  if(this.popStack.empty()) {
+    while (!this.pushStack.empty()) {
+      this.popStack.push(this.pushStack.pop())
+    }
+  }
+
+  return this.popStack.pop()
+}
