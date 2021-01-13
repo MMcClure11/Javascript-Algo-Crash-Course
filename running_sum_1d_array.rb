@@ -8,3 +8,11 @@
 #input nums=[1,1,1,1,1,1]
 #output [1,2,3,4,5]
 
+def running_sum(nums)
+  total = 0
+  puts nums.map { |num| num = total += num }
+end
+
+running_sum([1,2,3,4])
+puts
+running_sum([1,1,1,1,1,1])
