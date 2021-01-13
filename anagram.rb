@@ -12,10 +12,10 @@
   #space complexity: O(1) because table's size stays constant no matter how large n is
 
 def is_anagram(s, t)
-  if s.length() != t.length()
+  if s.length != t.length
     puts "False by length"
   end
-  puts clean_string(s) === clean_string(t)
+  puts clean_string(s) == clean_string(t)
 end
 
 def clean_string(string)
@@ -41,9 +41,9 @@ def hash_anagram(s, t)
   puts hash.all? {|k,v| v == 0}
 end
 
-# is_anagram("anagram", "nagaram") #true
-# is_anagram("rat", "car") #false
-# is_anagram("fsfs", "fafafafa") #false
+is_anagram("anagram", "nagaram") #true
+is_anagram("rat", "car") #false
+is_anagram("fsfs", "fafafafa") #false
 
 hash_anagram("anagram", "nagaram")
 hash_anagram("rat", "car")
