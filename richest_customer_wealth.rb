@@ -18,3 +18,10 @@
 # Input: accounts = [[2,8,7],[7,1,3],[1,9,5]]
 # Output: 17
 
+def richest_customer(accounts)
+  puts accounts.map { |account| account.sum}.max
+end
+
+richest_customer([[1,2,3],[3,2,1]]) #6
+richest_customer([[1,5],[7,3],[3,5]]) #10
+richest_customer([[2,8,7],[7,1,3],[1,9,5]]) #17
