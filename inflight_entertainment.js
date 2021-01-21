@@ -23,3 +23,33 @@ const canTwoMoviesFillFlight = (movieLengths, flightLength) => {
   }
   return false //we never found a match so return false 
 }
+
+//O(n) because sets use O(n) BUT still does not account for seeing same movie twice
+// const inflight = (flightLength, movieLengths) => {
+//   let firstSet = new Set()
+//   for(let m of movieLengths){
+//     firstSet.add(m)
+//   }
+//   for(let m of movieLengths){
+//       for(let m2 of firstSet){
+//       if (flightLength - m === m2) {
+//         return true
+//       }
+//     }
+//   }
+//   return false
+// }
+
+//O(n^2), does not account for not watching same movie twice
+// const inflight = (flightLength, movieLengths) => {
+//   for(let m of movieLengths){
+//     for(let m2 of movieLengths){
+//       if (flightLength - m === m2) {
+//         return true
+//       }
+//     }
+//   }
+//   return false
+// }
+
+// inflight(240, [140, 45, 60, 180])
