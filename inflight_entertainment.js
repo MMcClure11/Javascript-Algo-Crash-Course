@@ -5,3 +5,15 @@
 // assume watch exactly 2 movies
 // don't make users watch same movie twice
 // optimize for runtime over memory ( O(n)) where n is the length of movies
+
+const canTwoMoviesFillFlight = (movieLengths, flightLength) => {
+  const movieLengthsSeen = new Set()
+
+  for(let m of movieLengths) {
+    if(movieLengthsSeen.has(flightLength - m)) {
+      return true
+    }
+    movieLengthsSeen.add(m)
+  }
+  return false 
+}
