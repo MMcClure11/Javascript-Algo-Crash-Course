@@ -48,3 +48,41 @@ Constraints
   - Each string has fewer than 50 characters.
 */
 
+// import java.util;
+
+class Parser {
+  public static boolean isBalanced(String s) {
+    Stack<Character> stack = new Stack<Character>();
+    if((s.length() & 1) == 1) return false;
+    for(int i = 0; i < s.length(); i++) {
+      char c = s.charAt(i);
+      if(c == '(' || c == '{') {
+        stack.push(c);
+      } else if (c == ')') {
+        if(stack.isEmpty() || stack.pop() != '(') {
+          return false;
+        }
+      } else if (c == '}') {
+        if(stack.isEmpty() || stack.pop() != '{') {
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+}
+
+//Passes 4/4 of the given HackerRank tests
+
+// class Solution {
+//   public static void main(String[] args){
+//     Parser parser = new Parser();
+//     Scanner in = new Scanner(Stystem.in);
+
+//     while (in.hasNext()) {
+//       System.out.println(parser.isBalanced(in.next()));
+//     }
+//   }
+// }
+// The above is part of the given solution class which I did not change at all
+
