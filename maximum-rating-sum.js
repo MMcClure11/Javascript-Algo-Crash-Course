@@ -33,9 +33,14 @@ function maximumSum(arr) {
     ans = Math.max(arr[i], ans + arr[i]);
     sum = Math.max(sum, ans);
   }
-
+  console.log(sum)
   return sum 
 
 }
 //Passed 12/14 tests
 //Kadane's Algorithm, same as max-sub-array
+
+
+//To run the js file: $ node maximum-rating-sum.js
+let arr = [-1,3,4.-2,5,-7]
+maximumSum(arr)
