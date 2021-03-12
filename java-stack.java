@@ -50,27 +50,27 @@ Constraints
 
 // import java.util;
 
-class Parser {
-  public static boolean isBalanced(String s) {
-    Stack<Character> stack = new Stack<Character>();
-    if((s.length() & 1) == 1) return false;
-    for(int i = 0; i < s.length(); i++) {
-      char c = s.charAt(i);
-      if(c == '(' || c == '{') {
-        stack.push(c);
-      } else if (c == ')') {
-        if(stack.isEmpty() || stack.pop() != '(') {
-          return false;
-        }
-      } else if (c == '}') {
-        if(stack.isEmpty() || stack.pop() != '{') {
-          return false;
-        }
-      }
-    }
-    return true;
-  }
-}
+// class Parser {
+//   public static boolean isBalanced(String s) {
+//     Stack<Character> stack = new Stack<Character>();
+//     if((s.length() & 1) == 1) return false;
+//     for(int i = 0; i < s.length(); i++) {
+//       char c = s.charAt(i);
+//       if(c == '(' || c == '{') {
+//         stack.push(c);
+//       } else if (c == ')') {
+//         if(stack.isEmpty() || stack.pop() != '(') {
+//           return false;
+//         }
+//       } else if (c == '}') {
+//         if(stack.isEmpty() || stack.pop() != '{') {
+//           return false;
+//         }
+//       }
+//     }
+//     return true;
+//   }
+// }
 
 //Passes 4/4 of the given HackerRank tests
 
@@ -86,3 +86,38 @@ class Parser {
 // }
 // The above is part of the given solution class which I did not change at all
 
+
+import java.util.*;
+class BalancedParenthensies {
+
+  public static void main(String args[]) {
+
+      System.out.println(balancedParenthensies("{(a,b)}"));
+      System.out.println(balancedParenthensies("{(a},b)"));
+      System.out.println(balancedParenthensies("{)(a,b}"));
+  }
+
+  public static boolean balancedParenthensies(String s) {
+      Stack<Character> stack  = new Stack<Character>();
+      for(int i = 0; i < s.length(); i++) {
+          char c = s.charAt(i);
+          if(c == '[' || c == '(' || c == '{' ) {     
+              stack.push(c);
+          } else if(c == ']') {
+              if(stack.isEmpty() || stack.pop() != '[') {
+                  return false;
+              }
+          } else if(c == ')') {
+              if(stack.isEmpty() || stack.pop() != '(') {
+                  return false;
+              }           
+          } else if(c == '}') {
+              if(stack.isEmpty() || stack.pop() != '{') {
+                  return false;
+              }
+          }
+
+      }
+      return stack.isEmpty();
+  }
+}
