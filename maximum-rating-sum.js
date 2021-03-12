@@ -17,3 +17,13 @@ It must return a long integer denoting the maximum sum for any contiguous subarr
 maximumSum has the following parameters:
 arr[arr[0],...arr[n-1]]: an array of integers
 */
+
+/* 
+Complete the 'maximumSum' function below.
+The function is expected to return a LONG_INTEGER (ignore for javascript)
+The function accepts INTEGER_ARRAY as a parameter.
+*/
+
+function maximumSum(arr) {
+  //write your code here
+}
