@@ -26,4 +26,16 @@ The function accepts INTEGER_ARRAY as a parameter.
 
 function maximumSum(arr) {
   //write your code here
+  let ans = arr[0];
+  let sum = arr[0];
+
+  for(let i = 0; i < arr.length; i++){
+    ans = Math.max(arr[i], ans + arr[i]);
+    sum = Math.max(sum, ans);
+  }
+
+  return sum 
+
 }
+//Passed 12/14 tests
+//Kadane's Algorithm, same as max-sub-array
