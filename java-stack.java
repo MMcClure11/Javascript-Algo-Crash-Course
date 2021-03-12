@@ -2,7 +2,7 @@
 3/11/2021 Part 1/2 Confluent HackerRank challenge, must solve with java 7 or 8
 
 Java Stack
-Given a list of strings of bracket charactes: {}(),
+Given a list of strings of bracket characters: {}(),
 the string of brackets is balanced under the folowwing conditions:
 
 1. It is the empty string.
