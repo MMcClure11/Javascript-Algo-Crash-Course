@@ -41,3 +41,36 @@ class STACK
       return false;
   }
 }
+
+
+//Use stack to check for balanced paranthesis
+const balanceParantheses = (str)=>{
+  obj = new STACK();
+  for(let char of str)
+  {
+    if(char==='{' || char ==='(')
+      obj.add(char);
+    else {
+      switch(char)
+      {
+        case(')'):
+          if(obj.empty())
+            return false;
+          else if(obj.peek()!=='(') {
+            return false
+          } else obj.remove();
+          break;
+        case('}'):
+          if(obj.empty())
+            return false;
+          else if(obj.peek()!=='{') {
+            return false
+          } else obj.remove();
+          break;
+      }
+    }
+  }
+  return true;
+}
+
+console.log(balanceParantheses("(){}{()()()}"));
