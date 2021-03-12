@@ -9,7 +9,7 @@ function countup(n) {
     return countArray;
   }
 }
-console.log(countup(5)); //[ 1, 2, 3, 4, 5 ]
+console.log("countup", countup(5)); //[ 1, 2, 3, 4, 5 ]
 
 /* We have defined a function called countdown with one parameter (n).
  The function should use recursion to return an array 
@@ -20,3 +20,13 @@ console.log(countup(5)); //[ 1, 2, 3, 4, 5 ]
  return the array [5, 4, 3, 2, 1]. 
 */
 
+function countdown(n) {
+  if (n < 1) {
+    return [];
+  } else {
+    const countArray = countdown(n - 1);
+    countArray.unshift(n);
+    return countArray;
+  }
+}
+console.log("countdown", countdown(5));
