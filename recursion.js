@@ -1,4 +1,5 @@
 // freecodecamp basic javascript
+
 //Use recursion to create a countup
 
 function countup(n) {
@@ -11,6 +12,8 @@ function countup(n) {
   }
 }
 console.log("countup", countup(5)); //[ 1, 2, 3, 4, 5 ]
+
+//Use recursion to create a countdown
 
 /* We have defined a function called countdown with one parameter (n).
  The function should use recursion to return an array 
@@ -31,6 +34,8 @@ function countdown(n) {
   }
 }
 console.log("countdown", countdown(5));
+
+// Use recursion to create a range of numbers
 
 /*
 We have defined a function named rangeOfNumbers with two parameters. 
