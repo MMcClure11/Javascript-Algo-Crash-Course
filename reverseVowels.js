@@ -12,8 +12,26 @@
 //to run the file: $ node reverseVowels.js
 
 const reverseVowels = (s) => {
+  let chars = s.split('')
+  let left = 0;
+  let right = chars.length - 1; 
+  let vowels = ['a','e','i','o','u','A','E','I','O','U']
+  let temp;
 
-  return s
+  while(left < right) {
+    while(left < right && !vowels.includes(chars[left])){
+      left++;
+    }
+    while(left < right && !vowels.includes(chars[right])){
+      right--;
+    }
+    temp = chars[left];
+    chars[left] = chars[right];
+    chars[right] = temp;
+    left++;
+    right--
+  }
+  return chars.join('')
 }
 
 console.log(reverseVowels('hello'))//'holle'
