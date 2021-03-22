@@ -8,3 +8,13 @@
 // Output: "leotcede"
 // Note:
 // The vowels does not include the letter "y".
+
+//to run the file: $ node reverseVowels.js
+
+const reverseVowels = (s) => {
+
+  return s
+}
+
+console.log(reverseVowels('hello'))//'holle'
+console.log(reverseVowels('leetcode'))//'leotcede'
