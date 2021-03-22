@@ -1,4 +1,4 @@
-//Leet code 344. Reverse String
+//Leet code 344. Reverse String 'EASY'
 // Write a function that reverses a string. 
 //The input string is given as an array of characters s.
 // Example 1:
