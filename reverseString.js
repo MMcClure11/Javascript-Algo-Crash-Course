@@ -13,8 +13,24 @@
 // Follow up: Do not allocate extra space for another array. 
 //You must do this by modifying the input array in-place with O(1) extra memory.
 
+// const reverseString = (s) => {
+//   return s.split('').reverse().join('')
+// }
+
 const reverseString = (s) => {
-  return s.split('').reverse().join('')
+  let chars = s.split('')
+  let left = 0;
+  let right = chars.length - 1;
+  let temp;
+
+  while(left < right) {
+    temp = chars[left];
+    chars[left] = chars[right];
+    chars[right] = temp;
+    left++;
+    right--;
+  }
+  return chars.join('')
 }
 
 console.log(reverseString("hello")) //"olleh"
