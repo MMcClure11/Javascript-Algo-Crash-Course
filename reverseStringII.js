@@ -13,13 +13,43 @@
 // s consists of only lowercase English letters.
 // 1 <= k <= 104
 
+//First solve
+// const reverseString = (s, k) => {
+//   let res = ''
+//   for(let i = 0; i <= s.length; i += 2 * k) {
+//     res += s.substr(i, k).split('').reverse().join('')
+//     res += s.substr(i+k, k)
+//   }
+//   return res
+// }
+
+// console.log(reverseString("abcdefg", 2))// 'bacdfeg'
+// console.log(reverseString("abcd", 2))// 'bacd'
+
+//Second Solve
+
 const reverseString = (s, k) => {
-  let res = ''
+  let res = '';
   for(let i = 0; i <= s.length; i += 2 * k) {
-    res += s.substr(i, k).split('').reverse().join('')
-    res += s.substr(i+k, k)
+    res += reverse(s.substr(i, k));
+    res += s.substr(i+k, k);
   }
-  return res
+  return res;
+}
+
+const reverse = (s) => {
+  let chars = s.split('');
+  let left = 0;
+  let right = chars.length - 1;
+  let temp;
+  while(left < right) {
+    temp = chars[left];
+    chars[left] = chars[right];
+    chars[right] = temp;
+    left++;
+    right--;
+  }
+  return chars.join('')
 }
 
 console.log(reverseString("abcdefg", 2))// 'bacdfeg'
