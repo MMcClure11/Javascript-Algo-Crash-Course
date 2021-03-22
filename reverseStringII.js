@@ -13,3 +13,14 @@
 // s consists of only lowercase English letters.
 // 1 <= k <= 104
 
+const reverseString = (s, k) => {
+  let res = ''
+  for(let i = 0; i <= s.length; i += 2 * k) {
+    res += s.substr(i, k).split('').reverse().join('')
+    res += s.substr(i+k, k)
+  }
+  return res
+}
+
+console.log(reverseString("abcdefg", 2))// 'bacdfeg'
+console.log(reverseString("abcd", 2))// 'bacd'
