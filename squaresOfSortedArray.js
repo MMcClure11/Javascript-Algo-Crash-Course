@@ -16,5 +16,16 @@
 // 1 <= nums.length <= 104
 // -104 <= nums[i] <= 104
 // nums is sorted in non-decreasing order.
+
+const sortedSquares = (nums) => {
+  let arr = []
+  for(let num of nums){
+    arr.push(num * num)
+  }
+  return arr.sort(function(a,b){ return a-b })
+}
+
+console.log(sortedSquares([-7,-3,2,3,11])) //[4,9,9,49,121]
+console.log(sortedSquares([-4,-1,0,3,10])) //[0,1,9,16,100]
  
 // Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
