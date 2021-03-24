@@ -15,5 +15,13 @@ console.log(alphabeticalSort("cbsgdafer"))//abcdefgrs
 /*
 2. Now your function takes in a second argument with a custom alphabet.
   same assumptions apply, all lowercase and no special characters, the alphabet does not repeat characters
-*/
+  also, the alphabet is an array
+  */
 
+const alphabeticalSortTwo = (s, alphabet) => {
+  return s.split('')
+    .sort((a,b) => {return alphabet.indexOf(a) - alphabet.indexOf(b)})
+    .join('')
+}
+
+console.log(alphabeticalSortTwo("abcdebebdca", "badcfeghijklmnopqrstuvwxyz".split('')))
