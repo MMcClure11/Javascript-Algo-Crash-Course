@@ -3,3 +3,8 @@
 
 //1. Sort a string so that it is alphabetical
 
+const alphabeticalSort = (s) => {
+  return s.split('').sort().join('')
+}
+
+console.log(alphabeticalSort("cbsgdafer"))//abcdefgrs
