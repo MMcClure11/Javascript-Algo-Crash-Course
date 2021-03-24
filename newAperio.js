@@ -18,6 +18,15 @@ console.log(alphabeticalSort("cbsgdafer"))//abcdefgrs
   also, the alphabet is an array
   */
 
+//My Solve
+// const alphabeticalSortTwo = (s, alphabet) => {
+//   let arr = s.split('')
+//   return arr
+//     .sort((a,b) => {return alphabet.indexOf(a) - alphabet.indexOf(b)})
+//     .join('')
+// }
+
+//Nick's Solve
 const alphabeticalSortTwo = (s, alphabet) => {
   return s.split('')
     .sort((a,b) => {return alphabet.indexOf(a) - alphabet.indexOf(b)})
