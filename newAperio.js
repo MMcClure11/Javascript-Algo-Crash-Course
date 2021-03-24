@@ -36,6 +36,10 @@ Once it was over Nick had follow up questions:
     Looking at in now, I should have used const, because I'm declaring a variable that won't
     change during it's life in the function. So to make it clear to other developers const
     would have been the better choice.
+  What would happen if the string I gave it was a million characters long?
+    The javascript sort function looks at each character once as it sorts it and so it would 
+    have an O(n) runtime so if each sorting action was a second, it'd take 1 million seconds to 
+    sort the string. 'Yeah! It'd be a linear runtime.'
 */
 
 //Nick's Solve
