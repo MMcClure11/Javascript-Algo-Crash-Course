@@ -26,6 +26,18 @@ console.log(alphabeticalSort("cbsgdafer"))//abcdefgrs
 //     .join('')
 // }
 
+/*
+Once it was over Nick had follow up questions:
+  Why did you use the fat arrow function instead of the function keyword?
+    I had gotten used to anonymous arrow functions in react because it helps with not having 
+    to .bind(this) when accessing or updating state. From there it really became habit and 
+    a stylistic choice that I prefer.
+  Why did you use let instead of const? 
+    Looking at in now, I should have used const, because I'm declaring a variable that won't
+    change during it's life in the function. So to make it clear to other developers const
+    would have been the better choice.
+*/
+
 //Nick's Solve
 const alphabeticalSortTwo = (s, alphabet) => {
   return s.split('')
