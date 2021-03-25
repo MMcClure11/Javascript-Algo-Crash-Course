@@ -75,6 +75,7 @@ const stringSort = (s, alphabet) => {
   return arr.sort((a,b) => {return alphabet.indexOf(a) - alphabet.indexOf(b)}).join('')
 }
 
+//Nick's solve
 const defaultAlphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
 function alphabetize(string, alphabet = defaultAlphabet) {
