@@ -50,3 +50,46 @@ const alphabeticalSortTwo = (s, alphabet) => {
 }
 
 console.log(alphabeticalSortTwo("abcdebebdca", "badcfeghijklmnopqrstuvwxyz".split('')))
+
+//Actual code from the codeSandbox
+/*import "./styles.css";
+
+document.getElementById("app").innerHTML = `
+<h1>Hello Vanilla!</h1>
+<div>
+  We use the same configuration as Parcel to bundle this sandbox, you can find more
+  info about Parcel 
+  <a href="https://parceljs.org" target="_blank" rel="noopener noreferrer">here</a>.
+</div>
+`;
+
+// custom alphabet
+//  — 26-char string
+//  - all alpha chars as an array
+
+const stringSort = (s, alphabet) => {
+  // console.log(s)
+  let arr = s.split('')
+  //a,b are strings 
+  // console.log(alphabet.indexOf('a'))
+  return arr.sort((a,b) => {return alphabet.indexOf(a) - alphabet.indexOf(b)}).join('')
+}
+
+const defaultAlphabet = "abcdefghijklmnopqrstuvwxyz".split("");
+
+function alphabetize(string, alphabet = defaultAlphabet) {
+  return string
+    .split("")
+    .sort((a, b) => alphabet.indexOf(a) - alphabet.indexOf(b))
+    .join("");
+}
+
+
+console.log(stringSort("cxzyba", "bacdefghijklmnopqrstuvwzxy".split("")))//bac
+
+// var points = [40, 100, 1, 5, 25, 10];
+// points.sort(function(a, b){return a-b});
+//(c,b){return c-b} //+1 
+//(c,a){return c-1} -1
+// 
+*/
