@@ -20,15 +20,19 @@ defmodule Alphabetize do
       "neeiaoprw"
       
   """
+  #sort: This function uses the merge sort algorithm. 
+  #The given function should compare two arguments, 
+  #and return true if the first argument precedes or is in the same place as the second one.
   def alphabetize(string, alphabet \\ @default_alphabet) do
     string
     |> String.split("")
-    |> Enum.sort(&compare_alpha(&1, &2, alphabet))
+    # |> Enum.sort(&compare_alpha(&1, &2, alphabet))
+    |> Enum.sort(fn (a, b) -> compare_alpha(a, b, alphabet) end)
     |> Enum.join()
   end
-
+#returns true or false for each pair of letters for if the index of the first is less than the index of the second
   defp compare_alpha(a, b, alphabet) do
-    Enum.find_index(alphabet, &(&1 == a)) < Enum.find_index(alphabet, &(&1 == b))
+    Enum.find_index(alphabet, fn x -> x == a end) < Enum.find_index(alphabet, &(&1 == b))
   end
 end
 
