@@ -10,7 +10,8 @@ const alphabeticalSort = (s) => {
   return s.split('').sort().join('')
 }
 
-console.log(alphabeticalSort("cbsgdafer"))//abcdefgrs
+// console.log(alphabeticalSort("cbsgdafer"))
+//abcdefgrs
 
 /*
 2. Now your function takes in a second argument with a custom alphabet.
@@ -49,7 +50,7 @@ const alphabeticalSortTwo = (s, alphabet) => {
     .join('')
 }
 
-console.log(alphabeticalSortTwo("abcdebebdca", "badcfeghijklmnopqrstuvwxyz".split('')))
+// console.log(alphabeticalSortTwo("abcdebebdca", "badcfeghijklmnopqrstuvwxyz".split('')))
 
 //Actual code from the codeSandbox
 /*import "./styles.css";
@@ -74,7 +75,7 @@ const stringSort = (s, alphabet) => {
   // console.log(alphabet.indexOf('a'))
   return arr.sort((a,b) => {return alphabet.indexOf(a) - alphabet.indexOf(b)}).join('')
 }
-
+*/
 //Nick's solve
 const defaultAlphabet = "abcdefghijklmnopqrstuvwxyz".split("");
 
@@ -84,8 +85,10 @@ function alphabetize(string, alphabet = defaultAlphabet) {
     .sort((a, b) => alphabet.indexOf(a) - alphabet.indexOf(b))
     .join("");
 }
-
-
+console.log(alphabetize("abcdebebdca", "badcfeghijklmnopqrstuvwxyz".split('')))
+//bbbaaddccee
+console.log(alphabetize("abcdbdacbddbdbacbd")) //aaabbbbbbcccdddddd
+/*
 console.log(stringSort("cxzyba", "bacdefghijklmnopqrstuvwzxy".split("")))//bac
 
 // var points = [40, 100, 1, 5, 25, 10];
