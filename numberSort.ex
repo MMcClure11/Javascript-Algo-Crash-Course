@@ -6,7 +6,25 @@
 
 defmodule NumberSort do
 
+  @moduledoc """
+  Documentation for `NumberSort`.
+  """
+
   @default_order ~w(9 8 7 6 5 4 3 2 1)
+
+  @doc """
+  Orders the given `integer` to be the largest possible number. 
+  A custom `order` may be provided, which will be used for sorting.
+  
+  ## Examples
+  
+      iex> NumberSort.numberSort(1352)
+      5321
+      
+      iex> order = ~w(3 4 5 2 1 7 6 8 9)
+      ...> NumberSort.numberSort(1352, order)
+      3521
+      """
 
   def numberSort(num, order \\ @default_order) do 
     num
