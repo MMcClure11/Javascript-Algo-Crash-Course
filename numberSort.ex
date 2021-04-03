@@ -1,5 +1,5 @@
 # Part 1. Given an integer return the largest possible integer made out of its digits
-# assume positive numbers only and 0 is not included
+# assume positive numbers only and the integer does not start with 0.
 
 # Part 2. Make the function take in a second optional argument that is a list of digits 
 # in the order for the integer to be sorted in. 
@@ -10,7 +10,7 @@ defmodule NumberSort do
   Documentation for `NumberSort`.
   """
 
-  @default_order ~w(9 8 7 6 5 4 3 2 1)
+  @default_order ~w(9 8 7 6 5 4 3 2 1 0)
 
   @doc """
   Orders the given `integer` to be the largest possible number. 
@@ -41,7 +41,9 @@ defmodule NumberSort do
 end
 
 IO.puts NumberSort.numberSort(1352) # 5321
-IO.puts NumberSort.numberSort(38467) # 87643
-order = ~w(3 4 5 2 1 7 6 8 9)
+IO.puts NumberSort.numberSort(384067) # 876430
+order = ~w(3 4 5 2 1 7 6 0 8 9)
 IO.puts NumberSort.numberSort(1352, order) # 3521
 IO.puts NumberSort.numberSort(38467, order) # 34768
+IO.puts NumberSort.numberSort(384067, order) # 347608
+
