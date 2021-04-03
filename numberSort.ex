@@ -1,3 +1,6 @@
+# Part 1. Given an integer return the largest possible integer made out of its digits
+# assume positive numbers only and 0 is not included
+
 defmodule NumberSort do
   def numberSort(num) do 
     num
@@ -10,3 +13,4 @@ defmodule NumberSort do
 end
 
 IO.puts NumberSort.numberSort(1352) # 5321
+IO. puts NumberSort.numberSort(38467) # 87643
