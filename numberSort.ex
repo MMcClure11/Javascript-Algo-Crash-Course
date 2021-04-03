@@ -26,3 +26,4 @@ IO.puts NumberSort.numberSort(1352) # 5321
 IO.puts NumberSort.numberSort(38467) # 87643
 order = ~w(3 4 5 2 1 7 6 8 9)
 IO.puts NumberSort.numberSort(1352, order) # 3521
+IO.puts NumberSort.numberSort(38467, order) # 34768
