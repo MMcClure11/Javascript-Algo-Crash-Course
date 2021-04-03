@@ -57,13 +57,13 @@ defmodule Alphabetize do
 
   def alphabetize(string, alphabet \\ @default_alphabet) do
     string
-    |> String.split("")
-    |> Enum.sort(fn (a, b) -> compare_alpha(a, b, alphabet) end)
+    |> String.split("", trim: true)
+    |> Enum.sort(fn (a, b) -> compare_alpha?(a, b, alphabet) end)
     |> Enum.join()
   end
 
-  defp compare_alpha(a, b, alphabet) do
-    Enum.find_index(alphabet, fn x -> x == a end) < Enum.find_index(alphabet, fn x -> x == b end)
+  defp compare_alpha?(a, b, alphabet) do
+    Enum.find_index(alphabet, &(&1 == a)) < Enum.find_index(alphabet, &(&1 == b))
   end
 end
 
