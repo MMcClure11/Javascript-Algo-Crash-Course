@@ -24,7 +24,7 @@ defmodule NumberSort do
       iex> order = ~w(3 4 5 2 1 7 6 8 9)
       ...> NumberSort.numberSort(1352, order)
       3521
-      """
+  """
 
   def numberSort(num, order \\ @default_order) do 
     num
