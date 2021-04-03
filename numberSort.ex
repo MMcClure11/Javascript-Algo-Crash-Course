@@ -4,6 +4,12 @@
 # Part 2. Make the function take in a second optional argument that is a list of digits 
 # in the order for the integer to be sorted in. 
 
+# What is the runtime and space complexity?
+# Elixir's sort function uses the Merge Sort algorithm which is O (n log n) runtime 
+# Quasilinear Time (n * log(n)) - You have this if doubling the number of elements you are iterating over doesn’t double the amount of work. 
+# You can often assume that any sorting operation is n*log(n).
+# And the space complexity is O(n).
+
 defmodule NumberSort do
 
   @moduledoc """

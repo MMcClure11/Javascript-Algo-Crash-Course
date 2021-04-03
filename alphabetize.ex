@@ -25,7 +25,7 @@
 #       "neeiaoprw"
       
 #   """
-#   #sort: This function uses the merge sort algorithm. 
+#   #sort: This function uses the merge sort algorithm. Which means it would be O (n log n).
 #   #The given function should compare two arguments, 
 #   #and return true if the first argument precedes or is in the same place as the second one.
 #   def alphabetize(string, alphabet \\ @default_alphabet) do
