@@ -75,11 +75,11 @@ defmodule Alphabetize do
   def alphabetize(string, alphabet \\ @default_alphabet) do
     string
     |> String.split("")
-    |> Enum.sort(&compare_alpha(&1, &2, alphabet))
+    |> Enum.sort(&compare_alpha?(&1, &2, alphabet))
     |> Enum.join()
   end
 
-  defp compare_alpha(a, b, alphabet) do
+  defp compare_alpha?(a, b, alphabet) do
     Enum.find_index(alphabet, &(&1 == a)) < Enum.find_index(alphabet, &(&1 == b))
   end
 end
