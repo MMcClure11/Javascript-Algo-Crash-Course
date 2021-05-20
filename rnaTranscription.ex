@@ -16,3 +16,28 @@
 # C -> G
 # T -> A
 # A -> U
+
+defmodule RnaTranscription do
+  @doc """
+  Transcribes a character list representing DNA nucleotides to RNA
+
+  ## Examples
+
+  iex> RnaTranscription.to_rna('ACTG')
+  'UGAC'
+  """
+
+  @spec to_rna([char]) :: [char]
+  def to_rna(dna) do
+    map = %{
+      ?C => ?G,
+      ?G => ?C,
+      ?T => ?A,
+      ?A => ?U
+    }
+    Enum.map(dna, fn char -> map[char] end)
+  end
+end
+
+# To run file: $ elixir rnaTranscription.ex
+IO.puts RnaTranscription.to_rna('ACTG') #'UGAC'
