@@ -23,7 +23,7 @@ const reverseString = (s) => {
   let right = chars.length - 1;
   let temp;
 
-  while(left < right) {
+  while (left < right) {
     temp = chars[left];
     chars[left] = chars[right];
     chars[right] = temp;
@@ -34,3 +34,19 @@ const reverseString = (s) => {
 }
 
 console.log(reverseString("hello")) //"olleh"
+
+// 1/4/21
+// --- Directions
+// Given a string, return a new string with the reversed
+// order of characters
+// --- Examples
+//   reverse('apple') === 'leppa'
+//   reverse('hello') === 'olleh'
+//   reverse('Greetings!') === '!sgniteerG'
+
+function reverse(str) {
+  let reveresed = str.split("").reverse().join("")
+  return reveresed
+}
+
+console.log(reverse("dude")) // "olleh" 
