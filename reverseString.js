@@ -45,8 +45,19 @@ console.log(reverseString("hello")) //"olleh"
 //   reverse('Greetings!') === '!sgniteerG'
 
 function reverse(str) {
-  let reveresed = str.split("").reverse().join("")
-  return reveresed
+  return str.split("").reverse().join("")
 }
 
-console.log(reverse("dude")) // "olleh" 
+console.log(reverse("dude")) // "edud" 
+
+// 1/5/21
+function reverse2(str) {
+  let reversed = ""
+  for (let character of str) {
+    reversed = character + reversed;
+  }
+  return reversed;
+}
+
+// to run file: node reverseString.js
+console.log(reverse2("meks")) // "skem"
