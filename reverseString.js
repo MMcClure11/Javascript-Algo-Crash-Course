@@ -53,11 +53,19 @@ console.log(reverse("dude")) // "edud"
 // 1/5/21
 function reverse2(str) {
   let reversed = ""
-  for (let character of str) {
-    reversed = character + reversed;
+  for (const character of str) {
+    reversed = character.concat(reversed)
   }
-  return reversed;
+  return reversed
 }
 
-// to run file: node reverseString.js
 console.log(reverse2("meks")) // "skem"
+
+// 1/6/21
+function reverse3(str) {
+  return str.split('').reduce((rev, char) => char + rev, '');
+}
+
+console.log(reverse3("newaperio")) // "oirepawen"
+
+// to run file: node reverseString.js
