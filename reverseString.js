@@ -35,7 +35,6 @@ const reverseString = (s) => {
 
 console.log(reverseString("hello")) //"olleh"
 
-// 1/4/21
 // --- Directions
 // Given a string, return a new string with the reversed
 // order of characters
@@ -44,6 +43,8 @@ console.log(reverseString("hello")) //"olleh"
 //   reverse('hello') === 'olleh'
 //   reverse('Greetings!') === '!sgniteerG'
 
+// 1/4/21
+// JS tricks
 function reverse(str) {
   return str.split("").reverse().join("")
 }
@@ -51,10 +52,11 @@ function reverse(str) {
 console.log(reverse("dude")) // "edud" 
 
 // 1/5/21
+// with a loop
 function reverse2(str) {
   let reversed = ""
-  for (const character of str) {
-    reversed = character.concat(reversed)
+  for (character of str) {
+    reversed = character + reversed
   }
   return reversed
 }
@@ -62,8 +64,9 @@ function reverse2(str) {
 console.log(reverse2("meks")) // "skem"
 
 // 1/6/21
+// advanced function
 function reverse3(str) {
-  return str.split('').reduce((rev, char) => char + rev, '');
+  return str.split("").reduce((reversed, character) => character + reversed, "")
 }
 
 console.log(reverse3("newaperio")) // "oirepawen"
