@@ -66,7 +66,10 @@ console.log(reverse2("meks")) // "skem"
 // 1/6/21
 // advanced function
 function reverse3(str) {
-  return str.split("").reduce((reversed, character) => character + reversed)
+  // return str.split("").reduce((reversed, character) => {
+  //   return character + reversed
+  // })
+  return str.split("").reduce((reversed, character) => character + reversed, "")
 }
 
 console.log(reverse3("newaperio")) // "oirepawen"
