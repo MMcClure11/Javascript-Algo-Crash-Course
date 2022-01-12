@@ -16,4 +16,15 @@ function palindrome(str) {
 console.log(palindrome("meks")) // false
 console.log(palindrome("abba")) // true
 
+// 1/12/22
+// Advanced array function
+function palindrome2(str) {
+	return str.split("").every((char, i) => {
+		return char == str[str.length - i - 1]
+	})
+}
+
+console.log(palindrome2("meks")) //false
+console.log(palindrome2("abba")) //true
+
 // to run file: node palindrome.js
