@@ -18,6 +18,11 @@ console.log(palindrome("abba")) // true
 
 // 1/12/22
 // Advanced array function
+// This is not the ideal solution because it will do approx
+// twice as much work as it needs to do. It checks the first with
+// the last char, then second to second to last, etc.
+// Then it checks the inverse going through the entire array.
+// Not an efficient solution.
 function palindrome2(str) {
 	return str.split("").every((char, i) => {
 		return char == str[str.length - i - 1]
