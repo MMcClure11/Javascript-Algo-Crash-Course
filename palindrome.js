@@ -10,11 +10,11 @@
 // 1/11/22
 // Direct solution
 function palindrome(str) {
-	return str.split("").reverse().join("") === str
+  return str.split("").reverse().join("") === str;
 }
 
-console.log(palindrome("meks")) // false
-console.log(palindrome("abba")) // true
+console.log(palindrome("meks")); // false
+console.log(palindrome("abba")); // true
 
 // 1/12/22
 // Advanced array function
@@ -24,12 +24,12 @@ console.log(palindrome("abba")) // true
 // Then it checks the inverse going through the entire array.
 // Not an efficient solution.
 function palindrome2(str) {
-	return str.split("").every((char, i) => {
-		return char == str[str.length - i - 1]
-	})
+  return str.split("").every((char, i) => {
+    return char === str[str.length - i - 1];
+  });
 }
 
-console.log(palindrome2("meks")) //false
-console.log(palindrome2("abba")) //true
+console.log(palindrome2("meks")); //false
+console.log(palindrome2("abba")); //true
 
 // to run file: node palindrome.js
