@@ -10,7 +10,7 @@
 // 1/11/22
 // Direct solution
 function palindrome(str) {
-  return str === str.split("").reverse().join("");
+  return str.split("").reverse().join("") === str;
 }
 
 console.log(palindrome("meks")); // false
