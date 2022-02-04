@@ -10,7 +10,7 @@
 // 1/11/22
 // Direct solution
 function palindrome(str) {
-  return str === str.split("").reverse().join("");
+  return str.split("").reverse().join("") === str;
 }
 
 console.log(palindrome("meks")); // false
@@ -24,9 +24,7 @@ console.log(palindrome("abba")); // true
 // Then it checks the inverse going through the entire array.
 // Not an efficient solution.
 function palindrome2(str) {
-  return str.split("").every((char, i) => {
-    return char === str[str.length - i - 1];
-  });
+  return str;
 }
 
 console.log(palindrome2("meks")); //false
